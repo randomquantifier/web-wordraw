@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>web-wordraw</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="top">
+        <div>
+          <h1>web-wordraw</h1>
+          <p>Enter the answer, click cells to cycle colors, and get matching guesses.</p>
+        </div>
+        <div class="controls">
+          <label class="field">
+            <span>Answer</span>
+            <input id="answer" maxlength="5" placeholder="honey" />
+          </label>
+          <div class="field">
+            <span>Show</span>
+            <div class="radio">
+              <label class="radio-pill">
+                <input type="radio" name="mode" value="first" checked />
+                <span>One match</span>
+              </label>
+              <label class="radio-pill">
+                <input type="radio" name="mode" value="all" />
+                <span>All matches</span>
+              </label>
+            </div>
+          </div>
+          <div class="hint" id="status"></div>
+        </div>
+      </header>
+
+      <section class="board" id="board"></section>
+      <section class="legend">
+        <h2>Color meanings</h2>
+        <ul>
+          <li>Green (Correct): The letter is in the word and in the correct position.</li>
+          <li>Yellow (Wrong Spot): The letter is in the word but in the wrong position.</li>
+          <li>Gray (Incorrect): The letter does not appear in the word at all.</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
